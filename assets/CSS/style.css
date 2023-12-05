@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: 100vw;
+  background-position: center;
+  transition: background-image 0.5s ease;
+}
+
+.contatore{
+  display: inline-block;
+  border: solid 2px red;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 250px;
+  background-color: #95a4ab;
+  border-radius: 25px;
+}
+
+.valore{
+  display: flex;
+  justify-content: end;
+  border: solid 1px black;
+  background-color: yellow;
+  height: 40px;
+  font-size: xx-large;
+  border-radius: 25px;
+  margin: 5px;
+  padding-right: 10px;
+}
+
+button{
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin: 10px;
+  cursor: pointer;
+}
+  
+.btn-top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .btn-top {
+  transform: translateY(-0.33em);
+}
+  
+button:active .btn-top {
+  transform: translateY(0);
+}

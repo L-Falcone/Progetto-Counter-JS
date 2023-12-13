@@ -37,7 +37,7 @@ body{
   padding-right: 10px;
 }
 
-button{
+.button{
   --button_radius: 0.75em;
   --button_color: #e8e8e8;
   --button_outline_color: #000000;
@@ -62,10 +62,10 @@ button{
   transition: transform 0.1s ease;
 }
 
-button:hover .btn-top {
+.button:hover .btn-top {
   transform: translateY(-0.33em);
 }
   
-button:active .btn-top {
+.button:active .btn-top {
   transform: translateY(0);
 }

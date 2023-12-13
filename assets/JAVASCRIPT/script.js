@@ -1,8 +1,3 @@
-
-let contatore = document.getElementById('valore');
-let buttonPlus = document.getElementById('btnPlus');
-let buttonMin = document.getElementById('btnMin');
-
 let temp = 0;
 
 // Funzione con cambio sfondo in base a valore temperatura
@@ -35,29 +30,40 @@ function backImg() {
   body.style.backgroundColor = colorBg;
 }
 
-    
-    
-// Incremento
-buttonPlus.addEventListener('click', function() {
+// Creazione della box contenitore
+const box = document.createElement("div");
+box.classList.add("contatore");
+document.body.appendChild(box);
+
+// Creazione del contatore
+const contatore = document.createElement("p");
+contatore.classList.add("valore");
+contatore.textContent = "0°";
+box.appendChild(contatore);
+
+// Creazione del pulsante "+" con l'evento di incremento
+const buttonPlus = document.createElement("button");
+buttonPlus.classList.add("button");
+buttonPlus.innerHTML = '<p class="btn-top">+</p>';
+buttonPlus.addEventListener('click', function () {
   temp++;
   contatore.innerText = (temp + '°');
   backImg();
 });
+box.appendChild(buttonPlus);
 
-// Decremento
-buttonMin.addEventListener('click', function() {
+// Creazione del pulsante "-" con l'evento di decremento
+const buttonMin = document.createElement("button");
+buttonMin.classList.add("button");
+buttonMin.innerHTML = '<p class="btn-top">-</p>';
+buttonMin.addEventListener('click', function () {
   temp--;
   contatore.innerText = (temp + '°');
   backImg();
 });
+box.appendChild(buttonMin);
 
 // Chiamata funzione
-   backImg();
-
-
+backImg();
 
     
-
-
-
-
